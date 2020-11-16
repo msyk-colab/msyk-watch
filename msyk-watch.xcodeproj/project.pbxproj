@@ -1,0 +1,888 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E12FC1C256266C700DB3DD8 /* msyk_watchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12FC1B256266C700DB3DD8 /* msyk_watchApp.swift */; };
+		7E12FC1E256266C700DB3DD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12FC1D256266C700DB3DD8 /* ContentView.swift */; };
+		7E12FC20256266CD00DB3DD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E12FC1F256266CD00DB3DD8 /* Assets.xcassets */; };
+		7E12FC23256266CD00DB3DD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E12FC22256266CD00DB3DD8 /* Preview Assets.xcassets */; };
+		7E12FC2E256266CD00DB3DD8 /* msyk_watchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12FC2D256266CD00DB3DD8 /* msyk_watchTests.swift */; };
+		7E12FC39256266CE00DB3DD8 /* msyk_watchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12FC38256266CE00DB3DD8 /* msyk_watchUITests.swift */; };
+		7E12FC3E256266CE00DB3DD8 /* msyk-watch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7E12FC3D256266CE00DB3DD8 /* msyk-watch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7E12FC43256266D200DB3DD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E12FC42256266D200DB3DD8 /* Assets.xcassets */; };
+		7E12FC4A256266D200DB3DD8 /* msyk-watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E12FC49256266D200DB3DD8 /* msyk-watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7E12FC4F256266D200DB3DD8 /* msyk_watchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12FC4E256266D200DB3DD8 /* msyk_watchApp.swift */; };
+		7E12FC51256266D200DB3DD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12FC50256266D200DB3DD8 /* ContentView.swift */; };
+		7E12FC53256266D200DB3DD8 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12FC52256266D200DB3DD8 /* NotificationController.swift */; };
+		7E12FC55256266D200DB3DD8 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12FC54256266D200DB3DD8 /* NotificationView.swift */; };
+		7E12FC57256266D200DB3DD8 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12FC56256266D200DB3DD8 /* ComplicationController.swift */; };
+		7E12FC59256266D600DB3DD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E12FC58256266D600DB3DD8 /* Assets.xcassets */; };
+		7E12FC5C256266D600DB3DD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E12FC5B256266D600DB3DD8 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E12FC2A256266CD00DB3DD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E12FC10256266C600DB3DD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E12FC17256266C700DB3DD8;
+			remoteInfo = "msyk-watch";
+		};
+		7E12FC35256266CE00DB3DD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E12FC10256266C600DB3DD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E12FC17256266C700DB3DD8;
+			remoteInfo = "msyk-watch";
+		};
+		7E12FC3F256266CE00DB3DD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E12FC10256266C600DB3DD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E12FC3C256266CE00DB3DD8;
+			remoteInfo = "msyk-watch WatchKit App";
+		};
+		7E12FC4B256266D200DB3DD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E12FC10256266C600DB3DD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E12FC48256266D200DB3DD8;
+			remoteInfo = "msyk-watch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7E12FC64256266D600DB3DD8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7E12FC4A256266D200DB3DD8 /* msyk-watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E12FC68256266D600DB3DD8 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7E12FC3E256266CE00DB3DD8 /* msyk-watch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7E12FC18256266C700DB3DD8 /* msyk-watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "msyk-watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E12FC1B256266C700DB3DD8 /* msyk_watchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msyk_watchApp.swift; sourceTree = "<group>"; };
+		7E12FC1D256266C700DB3DD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7E12FC1F256266CD00DB3DD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E12FC22256266CD00DB3DD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7E12FC24256266CD00DB3DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E12FC29256266CD00DB3DD8 /* msyk-watchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "msyk-watchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E12FC2D256266CD00DB3DD8 /* msyk_watchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msyk_watchTests.swift; sourceTree = "<group>"; };
+		7E12FC2F256266CD00DB3DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E12FC34256266CE00DB3DD8 /* msyk-watchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "msyk-watchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E12FC38256266CE00DB3DD8 /* msyk_watchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msyk_watchUITests.swift; sourceTree = "<group>"; };
+		7E12FC3A256266CE00DB3DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E12FC3D256266CE00DB3DD8 /* msyk-watch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "msyk-watch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E12FC42256266D200DB3DD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E12FC44256266D200DB3DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E12FC49256266D200DB3DD8 /* msyk-watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "msyk-watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E12FC4E256266D200DB3DD8 /* msyk_watchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msyk_watchApp.swift; sourceTree = "<group>"; };
+		7E12FC50256266D200DB3DD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7E12FC52256266D200DB3DD8 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		7E12FC54256266D200DB3DD8 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		7E12FC56256266D200DB3DD8 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		7E12FC58256266D600DB3DD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E12FC5B256266D600DB3DD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7E12FC5D256266D600DB3DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E12FC5E256266D600DB3DD8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E12FC15256266C700DB3DD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E12FC26256266CD00DB3DD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E12FC31256266CE00DB3DD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E12FC46256266D200DB3DD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E12FC0F256266C600DB3DD8 = {
+			isa = PBXGroup;
+			children = (
+				7E12FC1A256266C700DB3DD8 /* msyk-watch */,
+				7E12FC2C256266CD00DB3DD8 /* msyk-watchTests */,
+				7E12FC37256266CE00DB3DD8 /* msyk-watchUITests */,
+				7E12FC41256266CE00DB3DD8 /* msyk-watch WatchKit App */,
+				7E12FC4D256266D200DB3DD8 /* msyk-watch WatchKit Extension */,
+				7E12FC19256266C700DB3DD8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7E12FC19256266C700DB3DD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E12FC18256266C700DB3DD8 /* msyk-watch.app */,
+				7E12FC29256266CD00DB3DD8 /* msyk-watchTests.xctest */,
+				7E12FC34256266CE00DB3DD8 /* msyk-watchUITests.xctest */,
+				7E12FC3D256266CE00DB3DD8 /* msyk-watch WatchKit App.app */,
+				7E12FC49256266D200DB3DD8 /* msyk-watch WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E12FC1A256266C700DB3DD8 /* msyk-watch */ = {
+			isa = PBXGroup;
+			children = (
+				7E12FC1B256266C700DB3DD8 /* msyk_watchApp.swift */,
+				7E12FC1D256266C700DB3DD8 /* ContentView.swift */,
+				7E12FC1F256266CD00DB3DD8 /* Assets.xcassets */,
+				7E12FC24256266CD00DB3DD8 /* Info.plist */,
+				7E12FC21256266CD00DB3DD8 /* Preview Content */,
+			);
+			path = "msyk-watch";
+			sourceTree = "<group>";
+		};
+		7E12FC21256266CD00DB3DD8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7E12FC22256266CD00DB3DD8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7E12FC2C256266CD00DB3DD8 /* msyk-watchTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E12FC2D256266CD00DB3DD8 /* msyk_watchTests.swift */,
+				7E12FC2F256266CD00DB3DD8 /* Info.plist */,
+			);
+			path = "msyk-watchTests";
+			sourceTree = "<group>";
+		};
+		7E12FC37256266CE00DB3DD8 /* msyk-watchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7E12FC38256266CE00DB3DD8 /* msyk_watchUITests.swift */,
+				7E12FC3A256266CE00DB3DD8 /* Info.plist */,
+			);
+			path = "msyk-watchUITests";
+			sourceTree = "<group>";
+		};
+		7E12FC41256266CE00DB3DD8 /* msyk-watch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				7E12FC42256266D200DB3DD8 /* Assets.xcassets */,
+				7E12FC44256266D200DB3DD8 /* Info.plist */,
+			);
+			path = "msyk-watch WatchKit App";
+			sourceTree = "<group>";
+		};
+		7E12FC4D256266D200DB3DD8 /* msyk-watch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7E12FC4E256266D200DB3DD8 /* msyk_watchApp.swift */,
+				7E12FC50256266D200DB3DD8 /* ContentView.swift */,
+				7E12FC52256266D200DB3DD8 /* NotificationController.swift */,
+				7E12FC54256266D200DB3DD8 /* NotificationView.swift */,
+				7E12FC56256266D200DB3DD8 /* ComplicationController.swift */,
+				7E12FC58256266D600DB3DD8 /* Assets.xcassets */,
+				7E12FC5D256266D600DB3DD8 /* Info.plist */,
+				7E12FC5E256266D600DB3DD8 /* PushNotificationPayload.apns */,
+				7E12FC5A256266D600DB3DD8 /* Preview Content */,
+			);
+			path = "msyk-watch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		7E12FC5A256266D600DB3DD8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7E12FC5B256266D600DB3DD8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E12FC17256266C700DB3DD8 /* msyk-watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E12FC69256266D600DB3DD8 /* Build configuration list for PBXNativeTarget "msyk-watch" */;
+			buildPhases = (
+				7E12FC14256266C700DB3DD8 /* Sources */,
+				7E12FC15256266C700DB3DD8 /* Frameworks */,
+				7E12FC16256266C700DB3DD8 /* Resources */,
+				7E12FC68256266D600DB3DD8 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E12FC40256266CE00DB3DD8 /* PBXTargetDependency */,
+			);
+			name = "msyk-watch";
+			productName = "msyk-watch";
+			productReference = 7E12FC18256266C700DB3DD8 /* msyk-watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7E12FC28256266CD00DB3DD8 /* msyk-watchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E12FC6C256266D600DB3DD8 /* Build configuration list for PBXNativeTarget "msyk-watchTests" */;
+			buildPhases = (
+				7E12FC25256266CD00DB3DD8 /* Sources */,
+				7E12FC26256266CD00DB3DD8 /* Frameworks */,
+				7E12FC27256266CD00DB3DD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E12FC2B256266CD00DB3DD8 /* PBXTargetDependency */,
+			);
+			name = "msyk-watchTests";
+			productName = "msyk-watchTests";
+			productReference = 7E12FC29256266CD00DB3DD8 /* msyk-watchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7E12FC33256266CE00DB3DD8 /* msyk-watchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E12FC6F256266D600DB3DD8 /* Build configuration list for PBXNativeTarget "msyk-watchUITests" */;
+			buildPhases = (
+				7E12FC30256266CE00DB3DD8 /* Sources */,
+				7E12FC31256266CE00DB3DD8 /* Frameworks */,
+				7E12FC32256266CE00DB3DD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E12FC36256266CE00DB3DD8 /* PBXTargetDependency */,
+			);
+			name = "msyk-watchUITests";
+			productName = "msyk-watchUITests";
+			productReference = 7E12FC34256266CE00DB3DD8 /* msyk-watchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7E12FC3C256266CE00DB3DD8 /* msyk-watch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E12FC65256266D600DB3DD8 /* Build configuration list for PBXNativeTarget "msyk-watch WatchKit App" */;
+			buildPhases = (
+				7E12FC3B256266CE00DB3DD8 /* Resources */,
+				7E12FC64256266D600DB3DD8 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E12FC4C256266D200DB3DD8 /* PBXTargetDependency */,
+			);
+			name = "msyk-watch WatchKit App";
+			productName = "msyk-watch WatchKit App";
+			productReference = 7E12FC3D256266CE00DB3DD8 /* msyk-watch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		7E12FC48256266D200DB3DD8 /* msyk-watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E12FC61256266D600DB3DD8 /* Build configuration list for PBXNativeTarget "msyk-watch WatchKit Extension" */;
+			buildPhases = (
+				7E12FC45256266D200DB3DD8 /* Sources */,
+				7E12FC46256266D200DB3DD8 /* Frameworks */,
+				7E12FC47256266D200DB3DD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "msyk-watch WatchKit Extension";
+			productName = "msyk-watch WatchKit Extension";
+			productReference = 7E12FC49256266D200DB3DD8 /* msyk-watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E12FC10256266C600DB3DD8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					7E12FC17256266C700DB3DD8 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					7E12FC28256266CD00DB3DD8 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 7E12FC17256266C700DB3DD8;
+					};
+					7E12FC33256266CE00DB3DD8 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 7E12FC17256266C700DB3DD8;
+					};
+					7E12FC3C256266CE00DB3DD8 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					7E12FC48256266D200DB3DD8 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 7E12FC13256266C600DB3DD8 /* Build configuration list for PBXProject "msyk-watch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7E12FC0F256266C600DB3DD8;
+			productRefGroup = 7E12FC19256266C700DB3DD8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E12FC17256266C700DB3DD8 /* msyk-watch */,
+				7E12FC28256266CD00DB3DD8 /* msyk-watchTests */,
+				7E12FC33256266CE00DB3DD8 /* msyk-watchUITests */,
+				7E12FC3C256266CE00DB3DD8 /* msyk-watch WatchKit App */,
+				7E12FC48256266D200DB3DD8 /* msyk-watch WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E12FC16256266C700DB3DD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E12FC23256266CD00DB3DD8 /* Preview Assets.xcassets in Resources */,
+				7E12FC20256266CD00DB3DD8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E12FC27256266CD00DB3DD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E12FC32256266CE00DB3DD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E12FC3B256266CE00DB3DD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E12FC43256266D200DB3DD8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E12FC47256266D200DB3DD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E12FC5C256266D600DB3DD8 /* Preview Assets.xcassets in Resources */,
+				7E12FC59256266D600DB3DD8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E12FC14256266C700DB3DD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E12FC1E256266C700DB3DD8 /* ContentView.swift in Sources */,
+				7E12FC1C256266C700DB3DD8 /* msyk_watchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E12FC25256266CD00DB3DD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E12FC2E256266CD00DB3DD8 /* msyk_watchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E12FC30256266CE00DB3DD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E12FC39256266CE00DB3DD8 /* msyk_watchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E12FC45256266D200DB3DD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E12FC53256266D200DB3DD8 /* NotificationController.swift in Sources */,
+				7E12FC51256266D200DB3DD8 /* ContentView.swift in Sources */,
+				7E12FC57256266D200DB3DD8 /* ComplicationController.swift in Sources */,
+				7E12FC4F256266D200DB3DD8 /* msyk_watchApp.swift in Sources */,
+				7E12FC55256266D200DB3DD8 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E12FC2B256266CD00DB3DD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E12FC17256266C700DB3DD8 /* msyk-watch */;
+			targetProxy = 7E12FC2A256266CD00DB3DD8 /* PBXContainerItemProxy */;
+		};
+		7E12FC36256266CE00DB3DD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E12FC17256266C700DB3DD8 /* msyk-watch */;
+			targetProxy = 7E12FC35256266CE00DB3DD8 /* PBXContainerItemProxy */;
+		};
+		7E12FC40256266CE00DB3DD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E12FC3C256266CE00DB3DD8 /* msyk-watch WatchKit App */;
+			targetProxy = 7E12FC3F256266CE00DB3DD8 /* PBXContainerItemProxy */;
+		};
+		7E12FC4C256266D200DB3DD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E12FC48256266D200DB3DD8 /* msyk-watch WatchKit Extension */;
+			targetProxy = 7E12FC4B256266D200DB3DD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7E12FC5F256266D600DB3DD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7E12FC60256266D600DB3DD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7E12FC62256266D600DB3DD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"msyk-watch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "msyk-watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Debug;
+		};
+		7E12FC63256266D600DB3DD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"msyk-watch WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "msyk-watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Release;
+		};
+		7E12FC66256266D600DB3DD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				IBSC_MODULE = msyk_watch_WatchKit_Extension;
+				INFOPLIST_FILE = "msyk-watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Debug;
+		};
+		7E12FC67256266D600DB3DD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				IBSC_MODULE = msyk_watch_WatchKit_Extension;
+				INFOPLIST_FILE = "msyk-watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Release;
+		};
+		7E12FC6A256266D600DB3DD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"msyk-watch/Preview Content\"";
+				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "msyk-watch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E12FC6B256266D600DB3DD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"msyk-watch/Preview Content\"";
+				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "msyk-watch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E12FC6D256266D600DB3DD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				INFOPLIST_FILE = "msyk-watchTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/msyk-watch.app/msyk-watch";
+			};
+			name = Debug;
+		};
+		7E12FC6E256266D600DB3DD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				INFOPLIST_FILE = "msyk-watchTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/msyk-watch.app/msyk-watch";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E12FC70256266D600DB3DD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				INFOPLIST_FILE = "msyk-watchUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "msyk-watch";
+			};
+			name = Debug;
+		};
+		7E12FC71256266D600DB3DD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				INFOPLIST_FILE = "msyk-watchUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "msyk-watch";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E12FC13256266C600DB3DD8 /* Build configuration list for PBXProject "msyk-watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E12FC5F256266D600DB3DD8 /* Debug */,
+				7E12FC60256266D600DB3DD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E12FC61256266D600DB3DD8 /* Build configuration list for PBXNativeTarget "msyk-watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E12FC62256266D600DB3DD8 /* Debug */,
+				7E12FC63256266D600DB3DD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E12FC65256266D600DB3DD8 /* Build configuration list for PBXNativeTarget "msyk-watch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E12FC66256266D600DB3DD8 /* Debug */,
+				7E12FC67256266D600DB3DD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E12FC69256266D600DB3DD8 /* Build configuration list for PBXNativeTarget "msyk-watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E12FC6A256266D600DB3DD8 /* Debug */,
+				7E12FC6B256266D600DB3DD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E12FC6C256266D600DB3DD8 /* Build configuration list for PBXNativeTarget "msyk-watchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E12FC6D256266D600DB3DD8 /* Debug */,
+				7E12FC6E256266D600DB3DD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E12FC6F256266D600DB3DD8 /* Build configuration list for PBXNativeTarget "msyk-watchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E12FC70256266D600DB3DD8 /* Debug */,
+				7E12FC71256266D600DB3DD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E12FC10256266C600DB3DD8 /* Project object */;
+}
