@@ -16,49 +16,18 @@ struct ContentView: View {
     @ObservedObject var connector = PhoneConnector()
    // var x:String
     var body: some View {
-        /*
-        Button("送信")
-        {
-          
-                self.connector.send()
-                    /// ファイル書き込み
-                    //self.writingToFile(text: "通信")
-                    /// ファイル読み込み
-                    ///読み込んだファイルの内容を確認
-                    //print("【ファイル内容】\(self.readFromFile())")
-        }
-        */
         VStack {
             ScrollView{
             Text(sensor.xStr)
             Text(sensor.yStr)
             Text(sensor.zStr)
-            
             Button(action:{
                 self.sensor.isStarted ? self.sensor.stop()
                 : self.sensor.start()
-            })
-                   {
+            }){
                 self.sensor.isStarted ? Text("STOP") : Text("START")
             }
-              
             Button(action:{
-                
-                /*
-                do{
-            
-                    //try fruitsArray.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
-                    try x.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
-                    //recordText
-                    //x
-                    print("Success to Write CSV")
-                }catch let error as NSError{
-                    print("Failure to Write CSV\n\(error)")
-                }
-                */
-                
-                //filetransfer　print
-                
                     self.strStatus = self.fileTransfer(fileURL: self.getSensorDataFileURL(), metaData: ["":""])
                 })
                     {

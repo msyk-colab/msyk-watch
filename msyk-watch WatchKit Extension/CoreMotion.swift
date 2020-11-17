@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-import Foundation
 import UIKit
 import CoreMotion
 import WatchConnectivity
@@ -16,60 +14,66 @@ import WatchKit
 
 class MotionSensor: NSObject,ObservableObject
 {
-
+    let motionManager = CMMotionManager()
+    //デバイスがモーションデータに対応しているかどうか
     
     private(set) var isRecording = false
     private let headerText = "timestamp,attitudeX,attitudeY,attitudeZ,gyroX,gyroY,gyroZ,gravityX,gravityY,gravityZ,accX,accY,accZ"
     private var recordText = ""
     var format = DateFormatter()
-   
-    
-/*
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?)
-    {
-     code
-    }
-    */
-    
-    
+     
     @Published var isStarted = false
     @Published var xStr = "0.0"
     @Published var yStr = "0.0"
     @Published var zStr = "0.0"
-    
-    
     //xの加速度がはいる配列
-    
     @Published var x:String = ""
     //@Published var x : [String] = []
     @Published var y: [String] = []
     @Published var z : [String] = []
-    
-    
     @Published var tempx:String = "XXX"
     //@Published var fileName = "x"
     
-    
-    
-    let motionManager = CMMotionManager()
-    //デバイスがモーションデータに対応しているかどうか
     //データ更新間隔を指定
     //データ取得の開始と、データ更新時に呼び出される関数を指定
-    func start()
-    {
-        recordText = ""
-        recordText += headerText + "\n"
-  
-        
-        if motionManager.isDeviceMotionAvailable
-        {
-            motionManager.deviceMotionUpdateInterval = 1
+    func start(){
+        //recordText = ""
+        //recordText += headerText + "\n"
+        if motionManager.isDeviceMotionAvailable{
+            motionManager.deviceMotionUpdateInterval = 1    //インターバル決定
+            let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+            print("paths:",paths)
+            
+            let filePath = NSHomeDirectory() + "/Documents/"
+            print("filepath:",filePath)
+            
+            let docsDirect = paths[0]//?
+            let fileURL = docsDirect.appendingPathComponent(sensorDataFileName)
+            
+            //let fileURL =
+            //let fileURL = URL(fileURLWithPath: path)
+            //print("fileURL",fileURL)
+            //let fileURL = self.fileURL(filePath: <#T##String#>)
+
+            let stringfirstline = "Timestamp,Pitch,Roll,Yaw,RotionX,RotionY,RotationZ,GravityX,GravityY,GravityZ,AxelX,AxelY,AxelZ\n"
+            //self.creatDataFile(onetimestring: stringfirstline, fileurl: fileURL)
+
+
+            
             motionManager.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {(motion:CMDeviceMotion?, error:Error?) in
-                self.updateMotionData(deviceMotion: motion!)})
-           // self.saveSensorDataToCsv(fileName: x)
+                self.getdeviceMotion(deviceMotion: motion!)
+                self.saveMotionData(deviceMotion: motion!, fileurl: fileURL)
+                self.updateMotionData(deviceMotion: motion!)
+                
+            })
+            
+            
+        print("Started sensor updates")
+    }else{
+        print("Failed to start sensor updates")
         }
-    //isStartedをフラグとして使い、「start()」時にtrue、「stop()」時にfalse
         isStarted = true
+        //isStartedをフラグとして使い、「start()」時にtrue、「stop()」時にfalse
     }
     
     
@@ -85,7 +89,7 @@ class MotionSensor: NSObject,ObservableObject
     
     
     //更新のたびにx, y, z方向への加速度を、xStr, yStr, zStrに文字列として格納
-    private func updateMotionData(deviceMotion:CMDeviceMotion)
+    func updateMotionData(deviceMotion:CMDeviceMotion)
     {
         xStr = String(deviceMotion.userAcceleration.x)
         yStr = String(deviceMotion.userAcceleration.y)
@@ -107,6 +111,92 @@ class MotionSensor: NSObject,ObservableObject
         saveSensorDataToCsv(fileName: fileName)
        }
     */
+    
+    
+    
+    func getdeviceMotion(deviceMotion: CMDeviceMotion){
+        print("userAccelation")
+        print("accX:", deviceMotion.userAcceleration.x)
+        print("accY:", deviceMotion.userAcceleration.y)
+        print("accZ:", deviceMotion.userAcceleration.z)
+        print("rotationRate")
+        print("gyroX:", deviceMotion.rotationRate.x)
+        print("gyroY:", deviceMotion.rotationRate.y)
+        print("gyroZ:", deviceMotion.rotationRate.z)
+        print("attitude")
+        print("attitudeX:", deviceMotion.attitude.pitch)
+        print("attitudeY:", deviceMotion.attitude.roll)
+        print("attitudeZ:", deviceMotion.attitude.yaw)
+        print("gravity")
+        print("gravityX:", deviceMotion.gravity.x)
+        print("gravityY:", deviceMotion.gravity.y)
+        print("gravityZ:", deviceMotion.gravity.z)
+        print("magneticField?")
+        print("magneticFieldX:", deviceMotion.magneticField.field.x)
+        print("magneticFieldY:", deviceMotion.magneticField.field.y)
+        print("magneticFieldZ:", deviceMotion.magneticField.field.z)
+    }
+    
+    func getMotionDataAcc(motionData:CMAccelerometerData){
+        print("生データ")
+        print("motionData.accX:", motionData.acceleration.x)
+        print("motionData.accY:", motionData.acceleration.y)
+        print("motionData.accZ:", motionData.acceleration.z)
+    }
+     /*
+        xStr = String(motionData.rotationRate.x)
+        yStr = String(motionData.rotationRate.y)
+        zStr = String(motionData.rotationRate.z)
+    }
+    */
+    
+    func saveMotionData(deviceMotion: CMDeviceMotion, fileurl: URL){
+        let string = "\(deviceMotion.timestamp),\(deviceMotion.attitude.pitch),\(deviceMotion.attitude.roll),\(deviceMotion.attitude.yaw),\(deviceMotion.rotationRate.x),\(deviceMotion.rotationRate.y),\(deviceMotion.rotationRate.z),\(deviceMotion.gravity.x),\(deviceMotion.gravity.y),\(deviceMotion.gravity.z),\(deviceMotion.userAcceleration.x),\(deviceMotion.userAcceleration.y),\(deviceMotion.userAcceleration.z)\n"
+        self.appendDataToFile(string: string, fileurl: fileurl)
+        print("success to saveMotonData")
+    }
+    
+    func appendDataToFile(string: String, fileurl: URL){
+        if let outputStream = OutputStream(url: fileurl, append: true) {
+            outputStream.open()
+            let data = string.data(using: .utf8)!
+            let bytesWritten = outputStream.write(string, maxLength: data.count)
+            if bytesWritten < 0 { print("Data write(append) failed.") }
+            outputStream.close()
+        } else {
+            print("Unable to open file for appending data.")
+        }
+    }
+
+    func creatDataFile(onetimestring: String, fileurl: URL){
+        if FileManager.default.fileExists(atPath: fileurl.path) {
+          do {
+            try FileManager.default.removeItem(atPath: fileurl.path)
+          } catch {
+              print("Existing sensor data file cannot be deleted.")
+          }
+        }
+        let data = onetimestring.data(using: .utf8)
+        if FileManager.default.createFile(atPath: fileurl.path, contents: data, attributes: nil){
+            print("Data file was created successfully.")
+        } else {
+            print("Failed creating data file.")
+        }
+    }
+    
+    
+    func testDataFileSave()->String{
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docsDirect = paths[0]
+        let fileURL = docsDirect.appendingPathComponent(sensorDataFileName)
+        creatDataFile(onetimestring: "First line\n", fileurl: fileURL)
+        appendDataToFile(string: "Second line\n", fileurl: fileURL)
+        return "Saved test data file"
+    }
+    
+    
+    
+    //func fileURL(withPath path: String) -> URL{}
     
     
     func saveSensorDataToCsv(fileName:String)
