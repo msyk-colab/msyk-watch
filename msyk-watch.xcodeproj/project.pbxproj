@@ -24,6 +24,10 @@
 		7E12FC59256266D600DB3DD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E12FC58256266D600DB3DD8 /* Assets.xcassets */; };
 		7E12FC5C256266D600DB3DD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E12FC5B256266D600DB3DD8 /* Preview Assets.xcassets */; };
 		7E12FC782562913500DB3DD8 /* CoreMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12FC772562913500DB3DD8 /* CoreMotion.swift */; };
+		7EA118122563E5E500DE1891 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA118112563E5E500DE1891 /* CommonFunctions.swift */; };
+		7EA1181D2563E65E00DE1891 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA118112563E5E500DE1891 /* CommonFunctions.swift */; };
+		7EA118352563EB4E00DE1891 /* SessionDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA118342563EB4E00DE1891 /* SessionDelegater.swift */; };
+		7EA1183B2563EBA500DE1891 /* SessionDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA118342563EB4E00DE1891 /* SessionDelegater.swift */; };
 		7EF3E901256293E6007B3553 /* PhoneConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF3E900256293E6007B3553 /* PhoneConnector.swift */; };
 		7EF3E90825629B52007B3553 /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF3E90725629B52007B3553 /* WatchConnector.swift */; };
 /* End PBXBuildFile section */
@@ -111,6 +115,8 @@
 		7E12FC5D256266D600DB3DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E12FC5E256266D600DB3DD8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		7E12FC772562913500DB3DD8 /* CoreMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotion.swift; sourceTree = "<group>"; };
+		7EA118112563E5E500DE1891 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		7EA118342563EB4E00DE1891 /* SessionDelegater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegater.swift; sourceTree = "<group>"; };
 		7EF3E900256293E6007B3553 /* PhoneConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnector.swift; sourceTree = "<group>"; };
 		7EF3E90725629B52007B3553 /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +156,7 @@
 		7E12FC0F256266C600DB3DD8 = {
 			isa = PBXGroup;
 			children = (
+				7EA118102563E59700DE1891 /* Shared */,
 				7E12FC1A256266C700DB3DD8 /* msyk-watch */,
 				7E12FC2C256266CD00DB3DD8 /* msyk-watchTests */,
 				7E12FC37256266CE00DB3DD8 /* msyk-watchUITests */,
@@ -243,6 +250,15 @@
 				7E12FC5B256266D600DB3DD8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7EA118102563E59700DE1891 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7EA118112563E5E500DE1891 /* CommonFunctions.swift */,
+				7EA118342563EB4E00DE1891 /* SessionDelegater.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,6 +453,8 @@
 			files = (
 				7E12FC1E256266C700DB3DD8 /* ContentView.swift in Sources */,
 				7EF3E90825629B52007B3553 /* WatchConnector.swift in Sources */,
+				7EA118352563EB4E00DE1891 /* SessionDelegater.swift in Sources */,
+				7EA118122563E5E500DE1891 /* CommonFunctions.swift in Sources */,
 				7E12FC1C256266C700DB3DD8 /* msyk_watchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,8 +479,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EA1183B2563EBA500DE1891 /* SessionDelegater.swift in Sources */,
 				7E12FC53256266D200DB3DD8 /* NotificationController.swift in Sources */,
 				7E12FC51256266D200DB3DD8 /* ContentView.swift in Sources */,
+				7EA1181D2563E65E00DE1891 /* CommonFunctions.swift in Sources */,
 				7EF3E901256293E6007B3553 /* PhoneConnector.swift in Sources */,
 				7E12FC57256266D200DB3DD8 /* ComplicationController.swift in Sources */,
 				7E12FC4F256266D200DB3DD8 /* msyk_watchApp.swift in Sources */,

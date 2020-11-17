@@ -47,7 +47,7 @@ class MotionSensor: NSObject,ObservableObject
             let filePath = NSHomeDirectory() + "/Documents/"
             print("filepath:",filePath)
             
-            let docsDirect = paths[0]//?
+            let docsDirect = paths[0] //音声用???
             let fileURL = docsDirect.appendingPathComponent(sensorDataFileName)
             
             //let fileURL =
@@ -56,18 +56,12 @@ class MotionSensor: NSObject,ObservableObject
             //let fileURL = self.fileURL(filePath: <#T##String#>)
 
             let stringfirstline = "Timestamp,Pitch,Roll,Yaw,RotionX,RotionY,RotationZ,GravityX,GravityY,GravityZ,AxelX,AxelY,AxelZ\n"
-            //self.creatDataFile(onetimestring: stringfirstline, fileurl: fileURL)
-
-
-            
+            self.creatDataFile(onetimestring: stringfirstline, fileurl: fileURL)
             motionManager.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {(motion:CMDeviceMotion?, error:Error?) in
                 self.getdeviceMotion(deviceMotion: motion!)
                 self.saveMotionData(deviceMotion: motion!, fileurl: fileURL)
                 self.updateMotionData(deviceMotion: motion!)
-                
             })
-            
-            
         print("Started sensor updates")
     }else{
         print("Failed to start sensor updates")
@@ -79,12 +73,17 @@ class MotionSensor: NSObject,ObservableObject
     
     func stop()
     {
+        if motionManager.isDeviceMotionAvailable{
         isStarted = false
         motionManager.stopDeviceMotionUpdates()
-        print(isStarted)
+        print("isStarted:",isStarted)
+        print("Stopped sensor updates")
         //配列をcsvにして保存する関数を呼び出す
-        self.saveSensorDataToCsv(fileName: tempx)
+        //self.saveSensorDataToCsv(fileName: tempx)
        // self.connector.send()
+        }else {
+            print("Failed stopping sensor updates")
+        }
     }
     
     
@@ -191,6 +190,7 @@ class MotionSensor: NSObject,ObservableObject
         let fileURL = docsDirect.appendingPathComponent(sensorDataFileName)
         creatDataFile(onetimestring: "First line\n", fileurl: fileURL)
         appendDataToFile(string: "Second line\n", fileurl: fileURL)
+        print("Saved test data file")
         return "Saved test data file"
     }
     
