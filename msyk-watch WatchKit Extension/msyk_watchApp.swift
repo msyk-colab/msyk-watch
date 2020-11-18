@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct msyk_watchApp: App {
+    //@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
+    
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
@@ -19,3 +22,4 @@ struct msyk_watchApp: App {
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }
+

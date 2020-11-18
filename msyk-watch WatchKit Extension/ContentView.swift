@@ -66,7 +66,7 @@ struct ContentView: View {
     
     func fileTransfer(fileURL: URL, metaData: [String:String])->String{
         WCSession.default.transferFile(fileURL, metadata: metaData)
-        print("success File transfer")
+        print("File transfer initiated")
         return "File transfer initiated."
     }
     

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct msyk_watchApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
 }
+

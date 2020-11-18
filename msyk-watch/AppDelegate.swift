@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import WatchConnectivity
 
-@UIApplicationMain
+//@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private lazy var sessionDelegater: SessionDelegater = {
