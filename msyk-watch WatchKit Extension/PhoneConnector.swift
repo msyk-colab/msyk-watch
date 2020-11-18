@@ -13,7 +13,7 @@ class PhoneConnector: NSObject, ObservableObject, WCSessionDelegate {
     
     @Published var receivedMessage = "PHONE : 未受信"
     @Published var count = 0
-    @Published var userInfo = ["test" : "テストだよ"]
+    @Published var userInfo = ["test" : "テスト"]
     
     override init()
     {

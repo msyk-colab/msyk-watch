@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct msyk_watchApp: App {
+    
+    //https://www.swiftbysundell.com/tips/using-an-app-delegate-with-swiftui-app-lifecycle/
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {

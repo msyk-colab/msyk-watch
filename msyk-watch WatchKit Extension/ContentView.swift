@@ -70,9 +70,6 @@ struct ContentView: View {
         return "File transfer initiated."
     }
     
-    
-    
-    
     /*
     /// ファイル書き込みサンプル
     func writingToFile(text: String)

@@ -150,11 +150,11 @@ class MotionSensor: NSObject,ObservableObject
     */
     
     func saveMotionData(deviceMotion: CMDeviceMotion, fileurl: URL){
-        let fileURL = URL.self
+        //let fileURL = URL.self
         let string = "\(deviceMotion.timestamp),\(deviceMotion.attitude.pitch),\(deviceMotion.attitude.roll),\(deviceMotion.attitude.yaw),\(deviceMotion.rotationRate.x),\(deviceMotion.rotationRate.y),\(deviceMotion.rotationRate.z),\(deviceMotion.gravity.x),\(deviceMotion.gravity.y),\(deviceMotion.gravity.z),\(deviceMotion.userAcceleration.x),\(deviceMotion.userAcceleration.y),\(deviceMotion.userAcceleration.z)\n"
         self.appendDataToFile(string: string, fileurl: fileurl)
-        print("success to saveMotonData")
-        print("fileURL:", fileURL)
+        print("success to saveMotionData")
+        //print("fileURL:", fileURL)
     }
     
     func appendDataToFile(string: String, fileurl: URL){
