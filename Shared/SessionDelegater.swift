@@ -77,7 +77,7 @@ class SessionDelegater: NSObject, WCSessionDelegate {
         print("File transfer from Watch has been done successfully.")
     }
 
-    
+
     /*
     
     // Called when WCSession activation state is changed.
