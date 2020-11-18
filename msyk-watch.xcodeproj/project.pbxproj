@@ -24,6 +24,9 @@
 		7E12FC59256266D600DB3DD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E12FC58256266D600DB3DD8 /* Assets.xcassets */; };
 		7E12FC5C256266D600DB3DD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E12FC5B256266D600DB3DD8 /* Preview Assets.xcassets */; };
 		7E12FC782562913500DB3DD8 /* CoreMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12FC772562913500DB3DD8 /* CoreMotion.swift */; };
+		7E922D882564D7E100B9E908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E922D872564D7E100B9E908 /* AppDelegate.swift */; };
+		7E922D8F2564D82600B9E908 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E922D8E2564D82600B9E908 /* SceneDelegate.swift */; };
+		7E922D962564D85500B9E908 /* SensorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E922D952564D85400B9E908 /* SensorDataManager.swift */; };
 		7EA118122563E5E500DE1891 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA118112563E5E500DE1891 /* CommonFunctions.swift */; };
 		7EA1181D2563E65E00DE1891 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA118112563E5E500DE1891 /* CommonFunctions.swift */; };
 		7EA118352563EB4E00DE1891 /* SessionDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA118342563EB4E00DE1891 /* SessionDelegater.swift */; };
@@ -115,6 +118,9 @@
 		7E12FC5D256266D600DB3DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E12FC5E256266D600DB3DD8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		7E12FC772562913500DB3DD8 /* CoreMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotion.swift; sourceTree = "<group>"; };
+		7E922D872564D7E100B9E908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7E922D8E2564D82600B9E908 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7E922D952564D85400B9E908 /* SensorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataManager.swift; sourceTree = "<group>"; };
 		7EA118112563E5E500DE1891 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
 		7EA118342563EB4E00DE1891 /* SessionDelegater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegater.swift; sourceTree = "<group>"; };
 		7EF3E900256293E6007B3553 /* PhoneConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnector.swift; sourceTree = "<group>"; };
@@ -182,8 +188,10 @@
 			isa = PBXGroup;
 			children = (
 				7E12FC1B256266C700DB3DD8 /* msyk_watchApp.swift */,
+				7E922D872564D7E100B9E908 /* AppDelegate.swift */,
 				7E12FC1D256266C700DB3DD8 /* ContentView.swift */,
 				7EF3E90725629B52007B3553 /* WatchConnector.swift */,
+				7E922D8E2564D82600B9E908 /* SceneDelegate.swift */,
 				7E12FC1F256266CD00DB3DD8 /* Assets.xcassets */,
 				7E12FC24256266CD00DB3DD8 /* Info.plist */,
 				7E12FC21256266CD00DB3DD8 /* Preview Content */,
@@ -233,6 +241,7 @@
 				7E12FC50256266D200DB3DD8 /* ContentView.swift */,
 				7E12FC52256266D200DB3DD8 /* NotificationController.swift */,
 				7EF3E900256293E6007B3553 /* PhoneConnector.swift */,
+				7E922D952564D85400B9E908 /* SensorDataManager.swift */,
 				7E12FC772562913500DB3DD8 /* CoreMotion.swift */,
 				7E12FC54256266D200DB3DD8 /* NotificationView.swift */,
 				7E12FC56256266D200DB3DD8 /* ComplicationController.swift */,
@@ -451,6 +460,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E922D882564D7E100B9E908 /* AppDelegate.swift in Sources */,
+				7E922D8F2564D82600B9E908 /* SceneDelegate.swift in Sources */,
 				7E12FC1E256266C700DB3DD8 /* ContentView.swift in Sources */,
 				7EF3E90825629B52007B3553 /* WatchConnector.swift in Sources */,
 				7EA118352563EB4E00DE1891 /* SessionDelegater.swift in Sources */,
@@ -484,6 +495,7 @@
 				7E12FC51256266D200DB3DD8 /* ContentView.swift in Sources */,
 				7EA1181D2563E65E00DE1891 /* CommonFunctions.swift in Sources */,
 				7EF3E901256293E6007B3553 /* PhoneConnector.swift in Sources */,
+				7E922D962564D85500B9E908 /* SensorDataManager.swift in Sources */,
 				7E12FC57256266D200DB3DD8 /* ComplicationController.swift in Sources */,
 				7E12FC4F256266D200DB3DD8 /* msyk_watchApp.swift in Sources */,
 				7E12FC782562913500DB3DD8 /* CoreMotion.swift in Sources */,
