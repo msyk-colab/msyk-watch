@@ -13,9 +13,6 @@ struct msyk_watchApp: App {
     //https://stackoverflow.com/questions/64082376/couldnt-cast-swiftui-extensiondelegate-to-extensiondelegate
     
     @WKExtensionDelegateAdaptor(ExtensionDelegate.self) var delegate
-    
-    
-    
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {

@@ -37,16 +37,23 @@ class MotionSensor: NSObject,ObservableObject
     //データ更新間隔を指定
     //データ取得の開始と、データ更新時に呼び出される関数を指定
     func start(){
+        
+        //デバッグ用
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        print("paths:",paths)
+        let filePath = NSHomeDirectory() + "/Documents/"
+        print("filepath:",filePath)
+        
+        
+        
         //recordText = ""
         //recordText += headerText + "\n"
         if motionManager.isDeviceMotionAvailable{
             motionManager.deviceMotionUpdateInterval = 1    //インターバル決定
             let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
             print("paths:",paths)
-            
             let filePath = NSHomeDirectory() + "/Documents/"
             print("filepath:",filePath)
-            
             let docsDirect = paths[0] //音声用???
             let fileURL = docsDirect.appendingPathComponent(sensorDataFileName)
             
@@ -58,7 +65,8 @@ class MotionSensor: NSObject,ObservableObject
             let stringfirstline = "Timestamp,Pitch,Roll,Yaw,RotionX,RotionY,RotationZ,GravityX,GravityY,GravityZ,AxelX,AxelY,AxelZ\n"
             self.creatDataFile(onetimestring: stringfirstline, fileurl: fileURL)
             motionManager.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {(motion:CMDeviceMotion?, error:Error?) in
-                self.getdeviceMotion(deviceMotion: motion!)
+                //self.getdeviceMotion(deviceMotion: motion!)
+                //self.getMotionDataAcc(motionData: motion!)
                 self.saveMotionData(deviceMotion: motion!, fileurl: fileURL)
                 self.updateMotionData(deviceMotion: motion!)
             })
@@ -150,11 +158,12 @@ class MotionSensor: NSObject,ObservableObject
     */
     
     func saveMotionData(deviceMotion: CMDeviceMotion, fileurl: URL){
-        //let fileURL = URL.self
+        //let fileURL = URL
         let string = "\(deviceMotion.timestamp),\(deviceMotion.attitude.pitch),\(deviceMotion.attitude.roll),\(deviceMotion.attitude.yaw),\(deviceMotion.rotationRate.x),\(deviceMotion.rotationRate.y),\(deviceMotion.rotationRate.z),\(deviceMotion.gravity.x),\(deviceMotion.gravity.y),\(deviceMotion.gravity.z),\(deviceMotion.userAcceleration.x),\(deviceMotion.userAcceleration.y),\(deviceMotion.userAcceleration.z)\n"
         self.appendDataToFile(string: string, fileurl: fileurl)
         print("success to saveMotionData")
-        //print("fileURL:", fileURL)
+        print(string)
+        print("fileurl:", fileurl)
     }
     
     func appendDataToFile(string: String, fileurl: URL){

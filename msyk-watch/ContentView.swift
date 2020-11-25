@@ -76,6 +76,9 @@ struct ContentView: View {
             try audioSession.setActive(true)
             audioRecorder = try AVAudioRecorder(url:getAudioFileURL(),settings: settingsDictionary)
             audioRecorder!.record()
+            
+            print("audioSession.setActive(true)")
+            
             return "REC audio in progress"
         }
         catch {
@@ -124,17 +127,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-/*
-struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-*/

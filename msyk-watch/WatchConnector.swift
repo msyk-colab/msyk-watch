@@ -8,14 +8,13 @@
 import Foundation
 import UIKit
 import WatchConnectivity
-
+/*
 class WatchConnector: NSObject, ObservableObject, WCSessionDelegate {
-    
+   
+    /*
     @Published var receivedMessage = "WATCH : 未受信"
-    
     @Published var count = 0
-    
-  /*
+
     override func viewDidLoad()
     {
       super.viewDidLoad()
@@ -57,7 +56,7 @@ class WatchConnector: NSObject, ObservableObject, WCSessionDelegate {
     func sessionDidDeactivate(_ session: WCSession) {
         print("sessionDidDeactivate")
     }
-    
+    /*
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         print("didReceiveMessage: \(message)")
         
@@ -65,7 +64,6 @@ class WatchConnector: NSObject, ObservableObject, WCSessionDelegate {
             self.receivedMessage = "WATCH : \(message["WATCH_COUNT"] as! Int)"
         }
     }
-    /*
     func send() {
         if WCSession.default.isReachable {
             count += 1
@@ -83,3 +81,4 @@ class WatchConnector: NSObject, ObservableObject, WCSessionDelegate {
     }
     
 }
+*/
