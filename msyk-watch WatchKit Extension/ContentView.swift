@@ -24,7 +24,7 @@ struct ContentView: View {
     var session: HKWorkoutSession!
     
     @ObservedObject var sensor = MotionSensor()
-    @ObservedObject var connector = PhoneConnector()
+    //@ObservedObject var connector = PhoneConnector()
     
     var body: some View {
         VStack {
