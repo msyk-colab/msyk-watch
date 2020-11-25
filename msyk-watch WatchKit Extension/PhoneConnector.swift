@@ -9,6 +9,10 @@ import Foundation
 import CoreMotion
 import UIKit
 import WatchConnectivity
+/*
+ 
+ 
+
 class PhoneConnector: NSObject, ObservableObject, WCSessionDelegate {
     
     @Published var receivedMessage = "PHONE : 未受信"
@@ -108,31 +112,22 @@ class PhoneConnector: NSObject, ObservableObject, WCSessionDelegate {
         }
 */
     
-
+/*
 func send() {
-     print(WCSession.default.isReachable)
-    
-    //if WCSession.default.isReachable {
-        //count += 1
-    
-    /*
-    WCSession.default.transferFile
-    (NSHomeDirectory() + "/Documents/" + fileName + ".csv": URL)
-    */
-    
-    
-     //,filePath: [String : Any]?) ->WCSessionFileTransfer
-      //  { error in
-        //    print(error)
-        //}
-   // }
- 
-     }
-    
-    
-    //print(WCSession.default.isReachable)
-    
-
- 
+    if WCSession.default.isReachable {
+        count += 1
+    WCSession.default.transferFile(NSHomeDirectory() + "/Documents/" + fileName + ".csv": URL),filePath: [String : Any]?) ->WCSessionFileTransfer
+        { error in
+        print(error)
+    }
+    }
+}
+print(WCSession.default.isReachable)
+}
+*/
 }
 
+ 
+ 
+ 
+ */

@@ -14,9 +14,9 @@ import WatchKit
 
 class MotionSensor: NSObject,ObservableObject
 {
-    let motionManager = CMMotionManager()
     //デバイスがモーションデータに対応しているかどうか
-    
+    let motionManager = CMMotionManager()
+
     private(set) var isRecording = false
     private let headerText = "timestamp,attitudeX,attitudeY,attitudeZ,gyroX,gyroY,gyroZ,gravityX,gravityY,gravityZ,accX,accY,accZ"
     private var recordText = ""
@@ -34,63 +34,52 @@ class MotionSensor: NSObject,ObservableObject
     @Published var tempx:String = "XXX"
     //@Published var fileName = "x"
     
-    //データ更新間隔を指定
+
     //データ取得の開始と、データ更新時に呼び出される関数を指定
-    func start(){
-        
-        //デバッグ用
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        print("paths:",paths)
-        let filePath = NSHomeDirectory() + "/Documents/"
-        print("filepath:",filePath)
-        
-        
-        
-        //recordText = ""
-        //recordText += headerText + "\n"
+    func startSensorUpdates(intervalSeconds: Double)->String{
         if motionManager.isDeviceMotionAvailable{
-            motionManager.deviceMotionUpdateInterval = 1    //インターバル決定
+            //isStartedをフラグとして使い、「start()」時にtrue、「stop()」時にfalse
+            isStarted = true
+            print("isStarted:",isStarted)
+            //インターバル決定
+            //motionManager.deviceMotionUpdateInterval = 1
             let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
             print("paths:",paths)
             let filePath = NSHomeDirectory() + "/Documents/"
             print("filepath:",filePath)
             let docsDirect = paths[0] //音声用???
             let fileURL = docsDirect.appendingPathComponent(sensorDataFileName)
-            
-            //let fileURL =
-            //let fileURL = URL(fileURLWithPath: path)
-            //print("fileURL",fileURL)
-            //let fileURL = self.fileURL(filePath: <#T##String#>)
-
             let stringfirstline = "Timestamp,Pitch,Roll,Yaw,RotionX,RotionY,RotationZ,GravityX,GravityY,GravityZ,AxelX,AxelY,AxelZ\n"
-            self.creatDataFile(onetimestring: stringfirstline, fileurl: fileURL)
+            creatDataFile(onetimestring: stringfirstline, fileurl: fileURL)
+            motionManager.deviceMotionUpdateInterval = intervalSeconds
             motionManager.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {(motion:CMDeviceMotion?, error:Error?) in
                 //self.getdeviceMotion(deviceMotion: motion!)
                 //self.getMotionDataAcc(motionData: motion!)
                 self.saveMotionData(deviceMotion: motion!, fileurl: fileURL)
-                self.updateMotionData(deviceMotion: motion!)
+                //self.updateMotionData(deviceMotion: motion!)
             })
-        print("Started sensor updates")
+            print("Started sensor updates")
+            return "Started sensor updates with "+String(intervalSeconds)+"s"
     }else{
         print("Failed to start sensor updates")
+        return "Failed to start sensor updates"
         }
-        isStarted = true
-        //isStartedをフラグとして使い、「start()」時にtrue、「stop()」時にfalse
     }
     
     
-    func stop()
-    {
+    func stopSensorUpdates()->String {
         if motionManager.isDeviceMotionAvailable{
-        isStarted = false
-        motionManager.stopDeviceMotionUpdates()
-        print("isStarted:",isStarted)
-        print("Stopped sensor updates")
+            isStarted = false
+            motionManager.stopDeviceMotionUpdates()
+            print("isStarted:",isStarted)
+            print("Stopped sensor updates")
+            return "Stopped sensor updates."
         //配列をcsvにして保存する関数を呼び出す
         //self.saveSensorDataToCsv(fileName: tempx)
        // self.connector.send()
         }else {
             print("Failed stopping sensor updates")
+            return "Failed stopping sensor updates"
         }
     }
     
@@ -107,18 +96,10 @@ class MotionSensor: NSObject,ObservableObject
         z.append(zStr)
     //配列をcsvにして保存したい
     }
-    
     func addRecordText(addText:String)
     {
         recordText += addText + "\n"
     }
-    
-    /*
-    @IBAction func button(){
-        saveSensorDataToCsv(fileName: fileName)
-       }
-    */
-    
     
     
     func getdeviceMotion(deviceMotion: CMDeviceMotion){
@@ -158,12 +139,10 @@ class MotionSensor: NSObject,ObservableObject
     */
     
     func saveMotionData(deviceMotion: CMDeviceMotion, fileurl: URL){
-        //let fileURL = URL
         let string = "\(deviceMotion.timestamp),\(deviceMotion.attitude.pitch),\(deviceMotion.attitude.roll),\(deviceMotion.attitude.yaw),\(deviceMotion.rotationRate.x),\(deviceMotion.rotationRate.y),\(deviceMotion.rotationRate.z),\(deviceMotion.gravity.x),\(deviceMotion.gravity.y),\(deviceMotion.gravity.z),\(deviceMotion.userAcceleration.x),\(deviceMotion.userAcceleration.y),\(deviceMotion.userAcceleration.z)\n"
         self.appendDataToFile(string: string, fileurl: fileurl)
         print("success to saveMotionData")
         print(string)
-        print("fileurl:", fileurl)
     }
     
     func appendDataToFile(string: String, fileurl: URL){
@@ -206,30 +185,23 @@ class MotionSensor: NSObject,ObservableObject
     }
     
     
-    
-    //func fileURL(withPath path: String) -> URL{}
-    
+    /*
+     //csv書き込み
+    func fileURL(withPath path: String) -> URL{}
     
     func saveSensorDataToCsv(fileName:String)
     {
-        
         let filePath = NSHomeDirectory() + "/Documents/" + fileName + ".csv"
-        print(NSHomeDirectory())
+        //print(NSHomeDirectory())
         //print(WCSession.default.isReachable)
         
         do{
-    
-            //try fruitsArray.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
             try x.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
-            //recordText
-            //x
             print("Success to Write CSV")
         }catch let error as NSError{
             print("Failure to Write CSV\n\(error)")
         }
     }
-    
-    
     
     //ファイル読み取り
     func searchAllFiles() -> [String]{
@@ -243,48 +215,7 @@ class MotionSensor: NSObject,ObservableObject
             return paths
         }
 }
-            //, fileArrData : [[String]]
-            
-            //let filePath = NSHomeDirectory() + "/Documents/" + fileName + ".csv"
-            //print(filePath)
-            //var fileStrData:String = ""
-            /*
-            //StringのCSV用データを準備
-            for singleArray in fileArrData
-            {
-                for singleString in singleArray
-                {
-                    x += "\"" + singleString + "\""
-                    if singleString != singleArray[singleArray.count-1]
-                    {
-                            x += ","
-                        
-                    }
-                    
-                }
-                x += "\n"
-                
-            }
-            print(x)
-            */
-/*
-            do{
-                    try x.write(toFile: filePath, atomically: true, encoding: String.Encoding.utf8)
-                    print("Success to Wite the File")
-                
-            }
-            catch let error as NSError{
-                    print("Failure to Write File\n\(error)")
-                
-            }
-            
-        }
-        
-    }
-*/
-    
   //ファイル送信
-/*
         override init()
         {
             super.init()
@@ -305,32 +236,7 @@ class MotionSensor: NSObject,ObservableObject
      }
      }
  */
-    
-    
-    
-    
-//->WCSessionFileTransfer)
- 
         
-        
-        /*
-        WCSession.default.transferFile( NSHomeDirectory() + "/Documents/" + fileName + ".csv",filePath: [String : Any]?)->WCSessionFileTransfer
- */
-        /*{ error in
-            print(error)
-        }
- */
-    
-
-
-
-
-
-
-
-
-
-
          /*
             var fileStrData:String = ""
             //StringのCSV用データを準備
@@ -466,3 +372,4 @@ class MotionWriter
     }
 }
 */
+}
