@@ -25,6 +25,7 @@
 		7E12FC5C256266D600DB3DD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E12FC5B256266D600DB3DD8 /* Preview Assets.xcassets */; };
 		7E12FC782562913500DB3DD8 /* SensorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12FC772562913500DB3DD8 /* SensorDataManager.swift */; };
 		7E49FE59256505B4009C820D /* ExtentionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49FE58256505B4009C820D /* ExtentionDelegate.swift */; };
+		7E8D1869256F95FA00C11D18 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D1868256F95FA00C11D18 /* WorkoutManager.swift */; };
 		7E922D882564D7E100B9E908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E922D872564D7E100B9E908 /* AppDelegate.swift */; };
 		7E922D8F2564D82600B9E908 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E922D8E2564D82600B9E908 /* SceneDelegate.swift */; };
 		7E922D962564D85500B9E908 /* CoreMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E922D952564D85400B9E908 /* CoreMotion.swift */; };
@@ -120,6 +121,7 @@
 		7E12FC5E256266D600DB3DD8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		7E12FC772562913500DB3DD8 /* SensorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataManager.swift; sourceTree = "<group>"; };
 		7E49FE58256505B4009C820D /* ExtentionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionDelegate.swift; sourceTree = "<group>"; };
+		7E8D1868256F95FA00C11D18 /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutManager.swift; path = "../../SpeedySlothCreatingAWorkout/SpeedySloth WatchKit Extension/WorkoutManager.swift"; sourceTree = "<group>"; };
 		7E922D872564D7E100B9E908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E922D8E2564D82600B9E908 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7E922D952564D85400B9E908 /* CoreMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotion.swift; sourceTree = "<group>"; };
@@ -242,9 +244,10 @@
 				7E12FC4E256266D200DB3DD8 /* msyk_watchApp.swift */,
 				7E49FE58256505B4009C820D /* ExtentionDelegate.swift */,
 				7E12FC50256266D200DB3DD8 /* ContentView.swift */,
-				7EF3E900256293E6007B3553 /* PhoneConnector.swift */,
 				7E12FC772562913500DB3DD8 /* SensorDataManager.swift */,
+				7E8D1868256F95FA00C11D18 /* WorkoutManager.swift */,
 				7E922D952564D85400B9E908 /* CoreMotion.swift */,
+				7EF3E900256293E6007B3553 /* PhoneConnector.swift */,
 				7E12FC52256266D200DB3DD8 /* NotificationController.swift */,
 				7E12FC54256266D200DB3DD8 /* NotificationView.swift */,
 				7E12FC56256266D200DB3DD8 /* ComplicationController.swift */,
@@ -498,6 +501,7 @@
 				7E12FC51256266D200DB3DD8 /* ContentView.swift in Sources */,
 				7E49FE59256505B4009C820D /* ExtentionDelegate.swift in Sources */,
 				7EA1181D2563E65E00DE1891 /* CommonFunctions.swift in Sources */,
+				7E8D1869256F95FA00C11D18 /* WorkoutManager.swift in Sources */,
 				7EF3E901256293E6007B3553 /* PhoneConnector.swift in Sources */,
 				7E922D962564D85500B9E908 /* CoreMotion.swift in Sources */,
 				7E12FC57256266D200DB3DD8 /* ComplicationController.swift in Sources */,

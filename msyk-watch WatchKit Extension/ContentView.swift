@@ -17,9 +17,12 @@ var audioPlayer: AVAudioPlayer?
 struct ContentView: View {
     
     var valueSensingIntervals = [60,10,5.0,2.0,1.0,0.5,0.1,0.05,0.01]
+    var Choises = ["MotionData","WorkOut","MotionData&WorkOut"]
     
     @State public var strStatus: String = "status"
     @State private var intSelectedInterval: Int = 0
+    @State private var strChoise: String = "MotionData"
+    
     let healthStore = HKHealthStore()
     var session: HKWorkoutSession!
     
@@ -76,7 +79,18 @@ struct ContentView: View {
                     }
                 }.frame(height: 40)
                 
+                /*
+                //取得するデータ種類を選択
+                Picker("Choises", selection: $strChoise){
+                    ForEach(0 ..< Choises.count) {
+                        Text(String(self.Choises[$0]))
+                    }
+                }.frame(height: 40)
+                */
+                
+                
                 Button(action:{
+
                     self.strStatus = self.sensor.startSensorUpdates(intervalSeconds: self.valueSensingIntervals[self.intSelectedInterval])
                     //self.startWorkoutSession()
                 })
