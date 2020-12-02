@@ -11,7 +11,7 @@ import SwiftUI
 struct msyk_watchApp: App {
     
     // This is the business logic.
-    @StateObject private var workoutManager = WorkoutManager()
+    var workoutManager = WorkoutManager()
     
     //https://stackoverflow.com/questions/64082376/couldnt-cast-swiftui-extensiondelegate-to-extensiondelegate
     
@@ -21,6 +21,9 @@ struct msyk_watchApp: App {
             NavigationView {
                 ContentView()
                     .environment(\.appDelegate, delegate)
+                
+                ContentView()
+                    .environmentObject(workoutManager)
             }
         }
 

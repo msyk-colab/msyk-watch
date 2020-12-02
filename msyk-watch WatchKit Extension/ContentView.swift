@@ -103,14 +103,16 @@ struct ContentView: View {
                 
                 
                 Button(action:{
+                    print("debug:¥t1")
 
                     self.strStatus = self.sensor.startSensorUpdates(intervalSeconds: self.valueSensingIntervals[self.intSelectedInterval])
-                    
+                    print("debug:¥t2")
                     //self.startWorkoutSession()
                     self.startAction()//!() // FixMe!
-                    
+                    print("debug:¥t3")
                     // Request HealthKit store authorization.
                     self.workoutSession.requestAuthorization()
+                    print("debug:¥t4")
                 })
                     {
                     Text("Start sensor DAQ")
@@ -222,10 +224,14 @@ struct ContentView: View {
     
     //workout start
     func startAction() {
+        print("debug:a:0")
+        workoutSession.debugdebug()
+        print("debug:a:1")
         workoutSession.startWorkout()
         withAnimation {
             workoutInProgress = true
         }
+        print("debug:a:2")
     }
     
     // Callback provided to the end workout menu button.
@@ -290,8 +296,10 @@ struct ContentView: View {
      */
     
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        /*
         Group {
             ContentView()
             .previewDevice("Apple Watch Series 2 - 40mm")
@@ -304,8 +312,24 @@ struct ContentView_Previews: PreviewProvider {
         .environmentObject(WorkoutManager())
     }
 }
+*/
 /*
-ContentView()
+        Group {
+            ContentView()
+            .previewDevice("Apple Watch Series 2 - 40mm")
+            .previewDisplayName("40 mm")
+            
+            ContentView()
+            .previewDevice("Apple Watch Series 2 - 44mm")
+            .previewDisplayName("44 mm")
+        }
+        .environmentObject(WorkoutManager())
     }
 }
-*/
+ */
+
+        ContentView()
+        
+    }
+}
+
