@@ -20,10 +20,11 @@ struct msyk_watchApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
-                    .environment(\.appDelegate, delegate)
+                    .environmentObject(workoutManager)
                 
                 ContentView()
-                    .environmentObject(workoutManager)
+                    .environment(\.appDelegate, delegate)
+                
             }
         }
 

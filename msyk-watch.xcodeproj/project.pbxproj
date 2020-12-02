@@ -33,6 +33,7 @@
 		7EA1181D2563E65E00DE1891 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA118112563E5E500DE1891 /* CommonFunctions.swift */; };
 		7EA118352563EB4E00DE1891 /* SessionDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA118342563EB4E00DE1891 /* SessionDelegater.swift */; };
 		7EA1183B2563EBA500DE1891 /* SessionDelegater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA118342563EB4E00DE1891 /* SessionDelegater.swift */; };
+		7EBE88752577ADB2000CB469 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EBE88742577ADB2000CB469 /* HealthKit.framework */; };
 		7EF3E901256293E6007B3553 /* PhoneConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF3E900256293E6007B3553 /* PhoneConnector.swift */; };
 		7EF3E90825629B52007B3553 /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF3E90725629B52007B3553 /* WatchConnector.swift */; };
 /* End PBXBuildFile section */
@@ -127,6 +128,8 @@
 		7E922D952564D85400B9E908 /* CoreMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotion.swift; sourceTree = "<group>"; };
 		7EA118112563E5E500DE1891 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
 		7EA118342563EB4E00DE1891 /* SessionDelegater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegater.swift; sourceTree = "<group>"; };
+		7EBE88722577ADB2000CB469 /* msyk-watch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "msyk-watch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		7EBE88742577ADB2000CB469 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		7EF3E900256293E6007B3553 /* PhoneConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnector.swift; sourceTree = "<group>"; };
 		7EF3E90725629B52007B3553 /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EBE88752577ADB2000CB469 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +177,7 @@
 				7E12FC41256266CE00DB3DD8 /* msyk-watch WatchKit App */,
 				7E12FC4D256266D200DB3DD8 /* msyk-watch WatchKit Extension */,
 				7E12FC19256266C700DB3DD8 /* Products */,
+				7EBE88732577ADB2000CB469 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,6 +246,7 @@
 		7E12FC4D256266D200DB3DD8 /* msyk-watch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7EBE88722577ADB2000CB469 /* msyk-watch WatchKit Extension.entitlements */,
 				7E12FC4E256266D200DB3DD8 /* msyk_watchApp.swift */,
 				7E49FE58256505B4009C820D /* ExtentionDelegate.swift */,
 				7E12FC50256266D200DB3DD8 /* ContentView.swift */,
@@ -274,6 +280,14 @@
 				7EA118342563EB4E00DE1891 /* SessionDelegater.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		7EBE88732577ADB2000CB469 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EBE88742577ADB2000CB469 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -654,6 +668,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "msyk-watch WatchKit Extension/msyk-watch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"msyk-watch WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = XRK6XFBV9R;
@@ -678,6 +693,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "msyk-watch WatchKit Extension/msyk-watch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"msyk-watch WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = XRK6XFBV9R;
