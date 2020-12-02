@@ -10,6 +10,9 @@ import SwiftUI
 @main
 struct msyk_watchApp: App {
     
+    // This is the business logic.
+    @StateObject private var workoutManager = WorkoutManager()
+    
     //https://stackoverflow.com/questions/64082376/couldnt-cast-swiftui-extensiondelegate-to-extensiondelegate
     
     @WKExtensionDelegateAdaptor(ExtensionDelegate.self) var delegate

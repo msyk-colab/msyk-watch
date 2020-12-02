@@ -9,12 +9,23 @@ import SwiftUI
 import WatchConnectivity
 import HealthKit
 import AVFoundation
+import Combine
 
 var audioRecorder: AVAudioRecorder?
 var audioPlayer: AVAudioPlayer?
 
 
 struct ContentView: View {
+    
+    
+    // Get the business logic from the environment.
+    @EnvironmentObject var workoutSession: WorkoutManager
+    
+    // This view will show an overlay when we don't have a workout in progress.
+    @State var workoutInProgress = false
+
+    
+    
     
     var valueSensingIntervals = [60,10,5.0,2.0,1.0,0.5,0.1,0.05,0.01]
     var Choises = ["MotionData","WorkOut","MotionData&WorkOut"]
@@ -33,9 +44,11 @@ struct ContentView: View {
         VStack {
             ScrollView{
                 Text(self.strStatus)
+                /*
                 Text(sensor.xStr)
                 Text(sensor.yStr)
                 Text(sensor.zStr)
+                */
                 //音声取得
                 /*
                 Button(action:{
@@ -92,7 +105,12 @@ struct ContentView: View {
                 Button(action:{
 
                     self.strStatus = self.sensor.startSensorUpdates(intervalSeconds: self.valueSensingIntervals[self.intSelectedInterval])
+                    
                     //self.startWorkoutSession()
+                    self.startAction()//!() // FixMe!
+                    
+                    // Request HealthKit store authorization.
+                    self.workoutSession.requestAuthorization()
                 })
                     {
                     Text("Start sensor DAQ")
@@ -102,6 +120,9 @@ struct ContentView: View {
                     self.strStatus = self.sensor.stopSensorUpdates()
                     //self.stopWorkoutSession()
                     //self.sensor.stop()
+                    print("End tapped!")
+                    self.endAction()
+                    
                 })
                     {
                     Text("Stop sensor DAQ")
@@ -199,6 +220,32 @@ struct ContentView: View {
         return "File transfer initiated."
     }
     
+    //workout start
+    func startAction() {
+        workoutSession.startWorkout()
+        withAnimation {
+            workoutInProgress = true
+        }
+    }
+    
+    // Callback provided to the end workout menu button.
+    func endAction() {
+        print("PageView got endAction()")
+        // End the workout.
+        workoutSession.endWorkout()
+        
+        /*
+        // Make sure you arrive back on the WorkoutView the next time a workout starts.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            self.pageSelection = .workout
+        }
+         */
+        
+        // Bring up StartView.
+        workoutInProgress = false
+    }
+
+    
     /*
     //ワークアウト用関数
     func startWorkoutSession() {
@@ -245,6 +292,20 @@ struct ContentView: View {
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+            .previewDevice("Apple Watch Series 2 - 40mm")
+            .previewDisplayName("40 mm")
+            
+            ContentView()
+            .previewDevice("Apple Watch Series 2 - 44mm")
+            .previewDisplayName("44 mm")
+        }
+        .environmentObject(WorkoutManager())
     }
 }
+/*
+ContentView()
+    }
+}
+*/

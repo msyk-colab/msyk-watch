@@ -38,9 +38,17 @@
 	<true/>
 	<key>NSHealthShareUsageDescription</key>
 	<string>For data logging by  msyk-watch</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Workouts tracked by SpeedySloth on Apple Watch will be saved to HealthKit.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>YES</string>
 	<key>NSMotionUsageDescription</key>
 	<string>YES</string>
+	<key>UIBackgroundModes</key>
+	<array/>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>workout-processing</string>
+	</array>
 </dict>
 </plist>
