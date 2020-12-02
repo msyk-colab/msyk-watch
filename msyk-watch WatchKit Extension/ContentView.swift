@@ -103,16 +103,14 @@ struct ContentView: View {
                 
                 
                 Button(action:{
-                    print("debug:¥t1")
 
                     self.strStatus = self.sensor.startSensorUpdates(intervalSeconds: self.valueSensingIntervals[self.intSelectedInterval])
-                    print("debug:¥t2")
+                    
                     //self.startWorkoutSession()
                     self.startAction()//!() // FixMe!
-                    print("debug:¥t3")
+                    
                     // Request HealthKit store authorization.
                     self.workoutSession.requestAuthorization()
-                    print("debug:¥t4")
                 })
                     {
                     Text("Start sensor DAQ")
@@ -224,14 +222,13 @@ struct ContentView: View {
     
     //workout start
     func startAction() {
-        print("debug:a:0")
-        workoutSession.debugdebug()
-        print("debug:a:1")
+        //workoutSession.debugdebug()
+        
         workoutSession.startWorkout()
         withAnimation {
             workoutInProgress = true
         }
-        print("debug:a:2")
+        
     }
     
     // Callback provided to the end workout menu button.
