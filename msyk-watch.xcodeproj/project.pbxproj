@@ -95,6 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E0F4E4225C7EC5B005139AB /* logger WatchKit Extension.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "logger WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		7E12FC18256266C700DB3DD8 /* msyk-watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "msyk-watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E12FC1B256266C700DB3DD8 /* msyk_watchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msyk_watchApp.swift; sourceTree = "<group>"; };
 		7E12FC1D256266C700DB3DD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -247,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				7EBE88722577ADB2000CB469 /* msyk-watch WatchKit Extension.entitlements */,
+				7E0F4E4225C7EC5B005139AB /* logger WatchKit Extension.entitlements */,
 				7E12FC4E256266D200DB3DD8 /* msyk_watchApp.swift */,
 				7E49FE58256505B4009C820D /* ExtentionDelegate.swift */,
 				7E12FC50256266D200DB3DD8 /* ContentView.swift */,
