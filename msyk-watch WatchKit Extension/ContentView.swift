@@ -19,7 +19,7 @@ struct ContentView: View {
     
     
     // Get the business logic from the environment.
-    @EnvironmentObject var workoutSession: WorkoutManager
+   // @EnvironmentObject var workoutSession: WorkoutManager
     
     // This view will show an overlay when we don't have a workout in progress.
     @State var workoutInProgress = false

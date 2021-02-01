@@ -671,7 +671,7 @@
 				CODE_SIGN_ENTITLEMENTS = "msyk-watch WatchKit Extension/msyk-watch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"msyk-watch WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				DEVELOPMENT_TEAM = A945B4MSCK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "msyk-watch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -679,7 +679,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watch.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.colab-watch.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -696,7 +696,7 @@
 				CODE_SIGN_ENTITLEMENTS = "msyk-watch WatchKit Extension/msyk-watch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"msyk-watch WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				DEVELOPMENT_TEAM = A945B4MSCK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "msyk-watch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -704,7 +704,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watch.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.colab-watch.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -722,10 +722,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				DEVELOPMENT_TEAM = A945B4MSCK;
 				IBSC_MODULE = msyk_watch_WatchKit_Extension;
 				INFOPLIST_FILE = "msyk-watch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watch.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.colab-watch.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -742,10 +742,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				DEVELOPMENT_TEAM = A945B4MSCK;
 				IBSC_MODULE = msyk_watch_WatchKit_Extension;
 				INFOPLIST_FILE = "msyk-watch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watch.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.colab-watch.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -763,7 +763,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"msyk-watch/Preview Content\"";
-				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				DEVELOPMENT_TEAM = A945B4MSCK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "msyk-watch/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
@@ -771,7 +771,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watch";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.colab-watch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -786,7 +786,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"msyk-watch/Preview Content\"";
-				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				DEVELOPMENT_TEAM = A945B4MSCK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "msyk-watch/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
@@ -794,7 +794,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.msyk-watch";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.msyk.colab-watch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -809,7 +809,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				DEVELOPMENT_TEAM = A945B4MSCK;
 				INFOPLIST_FILE = "msyk-watchTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -832,7 +832,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				DEVELOPMENT_TEAM = A945B4MSCK;
 				INFOPLIST_FILE = "msyk-watchTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -855,7 +855,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				DEVELOPMENT_TEAM = A945B4MSCK;
 				INFOPLIST_FILE = "msyk-watchUITests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -877,7 +877,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XRK6XFBV9R;
+				DEVELOPMENT_TEAM = A945B4MSCK;
 				INFOPLIST_FILE = "msyk-watchUITests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
